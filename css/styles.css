@@ -1,0 +1,942 @@
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&family=Amatic+SC:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+h2 {
+    font-family: "Amatic SC", sans-serif;
+    font-size: 3.3em;
+}
+
+h3 {
+    font-family: "Amatic SC", sans-serif;
+    font-size: 2.6em;
+}
+
+p,
+li {
+    font-family: "Afacad Flux", sans-serif;
+    font-size: 1.4em;
+}
+
+/* NavBar */
+
+.nav-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #c49f9f;
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    width: 190px;
+    height: 45px;
+    background-image: url('../img/prueba2.png');
+    font-size: 0;
+    background-repeat: no-repeat;
+}
+
+.nav-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.nav-links li {
+    margin-right: 45px;
+    margin: 10px 25px 10px 25px;
+}
+
+.nav-links li a {
+    color: #ffffff;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.nav-links li a:hover {
+    color: #242424;
+}
+
+/* Intro */
+
+.img-intro {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.intro {
+    color: #242424;
+}
+
+/* Regla general */
+
+.intro,
+.beneficios-res p,
+.beneficios-res strong,
+.formatos-res p,
+.libros-res p,
+#suscripcion p,
+h2,
+h3 {
+    margin: 40px 160px 40px 160px;
+    align-items: center;
+    text-align: center;
+}
+
+.beneficios-lista strong {
+    margin: 0;
+}
+
+/* Beneficios */
+
+.beneficios-res,
+.fondo,
+.libros-res {
+    background-color: #242424;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #f1cccc;
+    padding: 1px 0 1px 0;
+}
+
+.beneficios-lista {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    margin: 50px auto;
+    max-width: 1290px;
+}
+
+.beneficios-lista ul {
+    list-style: none;
+    margin: 0 0 0 50px;
+}
+
+li {
+    margin: 0px 0 10px 0;
+
+}
+
+span {
+    font-weight: 700;
+}
+
+.img-bene {
+    width: 100%;
+    height: auto;
+    display: block;
+    max-width: 700px;
+}
+
+/* Formatos */
+
+.formatos-res {
+    text-align: center;
+}
+
+.img-formato {
+    width: 100%;
+    height: auto;
+    display: block;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.video-res {
+    max-width: 700px;
+    width: 100%;
+    height: auto;
+    position: relative;
+    margin: 0 auto;
+}
+
+.video-res iframe {
+    width: 100%;
+    height: 371px;
+    border: none;
+}
+
+/* Descarga libros */
+
+.total-carousel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*
+    padding: 0 35px;
+    */
+    margin: 0 0 40px 0;
+    min-height: 30vh;
+}
+
+.wrapper {
+    max-width: 1000px;
+    position: relative;
+    margin: 10px;
+}
+
+.wrapper i {
+    top: 50%;
+    height: 46px;
+    width: 46px;
+    cursor: pointer;
+    position: absolute;
+    text-align: center;
+    font-size: 1.2rem;
+    line-height: 46px;
+    background: #c49f9f;
+    color: #242424;
+    border-radius: 50%;
+    transform: translateY(-50%);
+}
+
+.wrapper i:first-child {
+    left: -23px;
+    display: none;
+}
+
+.wrapper i:last-child {
+    right: -23px;
+}
+
+.wrapper .carousel {
+    font-size: 0px;
+    cursor: pointer;
+    overflow: hidden;
+    white-space: nowrap;
+    scroll-behavior: smooth;
+}
+
+.carousel.dragging {
+    cursor: grab;
+    scroll-behavior: auto;
+}
+
+.carousel.dragging img {
+    pointer-events: none;
+}
+
+.carousel img {
+    margin-left: 14px;
+    height: 250px;
+    object-fit: cover;
+    width: calc(100% / 4);
+}
+
+.carousel img :first-child {
+    margin-left: 0px;
+}
+
+/* Suscripción */
+
+.form-res {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+form {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 30px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    width: 400px;
+}
+
+.form-input {
+    margin-bottom: 15px;
+}
+
+label {
+    font-family: "Afacad Flux", sans-serif;
+    display: block;
+    font-weight: 700;
+    margin-bottom: 7px;
+    font-size: 1.3em;
+    color: #242424;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+    width: 94%;
+    padding: 9px;
+    border-radius: 15px;
+    border: 1px solid #ccc;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+    font-size: 1em;
+    font-family: "Afacad Flux", sans-serif;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+textarea:focus {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    outline: none;
+}
+
+textarea {
+    resize: none;
+    border-radius: 15px;
+}
+
+.btn-submit {
+    width: 50%;
+    padding: 10px;
+    background-color: #242424;
+    color: #c49f9f;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 16px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    margin-top: 10px;
+}
+
+.btn-submit:hover {
+    background-color: #c49f9f;
+    color: #ffffff;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.btn-res {
+    text-align: center;
+}
+
+/*Footer*/
+
+footer {
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+}
+
+.footer-content {
+    display: flex;
+    align-items: center;
+    background-color: #c49f9f;
+    padding: 30px;
+    color: #ffffff;
+    justify-content: flex-start;
+}
+
+.footer-social {
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.footer-social img {
+    border-radius: 50%;
+    margin: 0 60px 0 80px;
+}
+
+.footer-contact h3,
+.footer-social h3 {
+    margin: 0 0 15px 0;
+    text-align: left;
+}
+
+.footer-contact ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-contact ul li {
+    margin-bottom: 20px;
+}
+
+.footer-contact ul li a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.footer-logo {
+    width: 268px;
+    height: 82px;
+    background-image: url('../img/prueba2.png');
+    background-repeat: no-repeat;
+    font-size: 0;
+}
+
+/* Hamburguesa */
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.bar {
+    height: 3px;
+    width: 25px;
+    background-color: #ffffff;
+    margin: 3px 0;
+}
+
+@media (min-width: 1200px) and (max-width: 1439px) {
+
+    .wrapper {
+        max-width: 800px;
+        position: relative;
+        margin: 10px;
+    }
+
+    .carousel img {
+        margin-left: 14px;
+        height: 250px;
+        object-fit: cover;
+        width: calc(100% / 3);
+    }
+
+    .beneficios-lista {
+        flex-direction: column;
+        display: flex;
+        margin: 0 auto;
+        align-items: center;
+        justify-content: center;
+        max-width: 800px;
+        width: 100%;
+    }
+
+    .beneficios-lista ul {
+        margin: 40px;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+
+    .intro h2 {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .wrapper {
+        max-width: 800px;
+        position: relative;
+        margin: 10px;
+    }
+
+    .carousel img {
+        margin-left: 14px;
+        height: 250px;
+        object-fit: cover;
+        width: calc(100% / 3);
+    }
+
+    .beneficios-lista {
+        flex-direction: column;
+        display: flex;
+        margin: 0 auto;
+        align-items: center;
+        justify-content: center;
+        max-width: 786px;
+        width: 100%;
+    }
+
+    .beneficios-lista ul {
+        margin: 40px;
+    }
+
+    .nav-links li a:hover {
+        color: #242424;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #fff2f2;
+        position: absolute;
+        top: 44px;
+        left: 0;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links li a {
+        margin-left: 10px;
+        color: #242424;
+    }
+
+    .hamburger {
+        display: flex;
+        margin: 0 38px 0 38px;
+    }
+
+    .bar {
+        order: 1;
+    }
+
+    .logo {
+        order: 2;
+        margin: 0 38px;
+    }
+
+    .nav-container {
+        justify-content: space-between;
+    }
+
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+
+    .intro h2 {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .wrapper {
+        max-width: 526px;
+        position: relative;
+        margin: 10px;
+    }
+
+    .carousel img {
+        margin-left: 14px;
+        height: 250px;
+        object-fit: cover;
+        width: calc(100% / 2);
+    }
+
+    .img-bene {
+        max-width: 650px;
+    }
+
+    .beneficios-lista {
+        flex-direction: column;
+        display: flex;
+        margin: 0 auto;
+        align-items: center;
+        justify-content: center;
+        max-width: 721px;
+        width: 100%;
+    }
+
+    .beneficios-lista ul {
+        margin: 40px;
+    }
+
+    .nav-links li a:hover {
+        color: #242424;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #fff2f2;
+        position: absolute;
+        top: 44px;
+        left: 0;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links li a {
+        margin-left: 10px;
+        color: #242424;
+    }
+
+    .hamburger {
+        display: flex;
+        margin: 0 38px 0 38px;
+    }
+
+    .bar {
+        order: 1;
+    }
+
+    .logo {
+        order: 2;
+        margin: 0 38px;
+    }
+
+    .nav-container {
+        justify-content: space-between;
+    }
+
+    .intro,
+    .beneficios-res p,
+    .beneficios-res strong,
+    .formatos-res p,
+    .libros-res p,
+    #suscripcion p,
+    h2,
+    h3 {
+        margin: 40px 80px 40px 80px;
+        align-items: center;
+        text-align: center;
+    }
+
+    .beneficios-lista strong {
+        margin: 0;
+    }
+
+}
+
+@media (min-width: 576px) and (max-width: 767px) {
+
+    p,
+    li {
+        font-size: 1em;
+    }
+
+    h2 {
+        font-size: 2em;
+    }
+
+    h3 {
+        font-size: 1.7em;
+    }
+
+    .intro h2 {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .wrapper {
+        max-width: 320px;
+        position: relative;
+        margin: 10px;
+    }
+
+    .carousel img {
+        height: 320px;
+        object-fit: cover;
+        width: calc(100% / 1);
+        margin-left: 14px;
+    }
+
+    .beneficios-lista {
+        flex-direction: column;
+        display: flex;
+        margin: 0 auto;
+        align-items: center;
+        justify-content: center;
+        max-width: 721px;
+        width: 100%;
+    }
+
+    .beneficios-lista ul {
+        margin: 40px;
+    }
+
+    .nav-links li a:hover {
+        color: #242424;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #fff2f2;
+        position: absolute;
+        top: 44px;
+        left: 0;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links li a {
+        margin-left: 10px;
+        color: #242424;
+    }
+
+    .hamburger {
+        display: flex;
+        margin: 0 38px 0 38px;
+    }
+
+    .bar {
+        order: 1;
+    }
+
+    .logo {
+        order: 2;
+        margin: 0 38px;
+    }
+
+    .nav-container {
+        justify-content: space-between;
+    }
+
+    .intro,
+    .beneficios-res p,
+    .beneficios-res strong,
+    .formatos-res p,
+    .libros-res p,
+    #suscripcion p,
+    h2,
+    h3 {
+        margin: 20px 20px 20px 20px;
+        align-items: center;
+        text-align: center;
+    }
+
+    .beneficios-lista strong {
+        margin: 0;
+    }
+
+    .form-res {
+        margin: 40px;
+    }
+
+    .video-res iframe {
+        width: 576px;
+        height: 321px;
+    }
+
+    .img-bene,
+    .img-formato {
+        min-width: 320px;
+    }
+
+    label {
+        font-size: 1em;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    textarea {
+        font-size: 0.8em;
+    }
+
+    form {
+        padding: 20px;
+    }
+
+    .form-input {
+        margin-bottom: 8px;
+    }
+
+    .btn-submit {
+        font-size: 0.9em;
+        width: 40%;
+        margin-top: 5px;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+    }
+
+    .footer-contact {
+        margin: 15px 0 0 0;
+    }
+
+    .footer-social img {
+        width: 250px;
+        height: 250px;
+    }
+
+    .footer-contact h3,
+    .footer-social h3 {
+        text-align: center;
+    }
+
+    .footer-contact ul li {
+        margin-bottom: 15px;
+        text-align: center;
+    }
+
+    .footer-logo {
+        display: none;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 575px) {
+
+    p,
+    li {
+        font-size: 1em;
+    }
+
+    h2 {
+        font-size: 2em;
+    }
+
+    h3 {
+        font-size: 1.7em;
+    }
+
+    .intro h2 {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .wrapper {
+        max-width: 320px;
+        position: relative;
+        margin: 10px;
+    }
+
+    .carousel img {
+        height: 320px;
+        object-fit: cover;
+        width: calc(100% / 1);
+        margin-left: 14px;
+    }
+
+    .beneficios-lista {
+        flex-direction: column;
+        display: flex;
+        margin: 0 auto;
+        align-items: center;
+        justify-content: center;
+        max-width: 721px;
+        width: 100%;
+    }
+
+    .beneficios-lista ul {
+        margin: 40px;
+    }
+
+    .nav-links li a:hover {
+        color: #242424;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #fff2f2;
+        position: absolute;
+        top: 44px;
+        left: 0;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links li a {
+        margin-left: 10px;
+        color: #242424;
+    }
+
+    .hamburger {
+        display: flex;
+        margin: 0 38px 0 38px;
+    }
+
+    .bar {
+        order: 1;
+    }
+
+    .logo {
+        order: 2;
+        margin: 0 38px 0 0;
+    }
+
+    .nav-container {
+        justify-content: space-between;
+    }
+
+    .intro,
+    .beneficios-res p,
+    .beneficios-res strong,
+    .formatos-res p,
+    .libros-res p,
+    #suscripcion p,
+    h2,
+    h3 {
+        margin: 20px 20px 20px 20px;
+        align-items: center;
+        text-align: center;
+    }
+
+    .beneficios-lista strong {
+        margin: 0;
+    }
+
+    .form-res {
+        margin: 40px;
+    }
+
+    .video-res iframe {
+        width: 320px;
+        height: 181px;
+    }
+
+    .img-bene,
+    .img-formato {
+        min-width: 320px;
+    }
+
+    label {
+        font-size: 1em;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    textarea {
+        font-size: 0.8em;
+    }
+
+    form {
+        padding: 20px;
+    }
+
+    .form-input {
+        margin-bottom: 8px;
+    }
+
+    .btn-submit {
+        font-size: 0.9em;
+        width: 40%;
+        margin-top: 5px;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+    }
+
+    .footer-contact {
+        margin: 15px 0 0 0;
+    }
+
+    .footer-social img {
+        width: 250px;
+        height: 250px;
+    }
+
+    .footer-contact h3,
+    .footer-social h3 {
+        text-align: center;
+    }
+
+    .footer-contact ul li {
+        margin-bottom: 15px;
+        text-align: center;
+    }
+
+    .footer-logo {
+        display: none;
+    }
+
+}
